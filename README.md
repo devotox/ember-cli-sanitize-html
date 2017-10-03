@@ -1,5 +1,9 @@
 # ember-cli-sanitize-html
 
+ [![Build Status](https://travis-ci.org/devotox/ember-cli-sanitize-html.svg)](https://travis-ci.org/devotox/ember-cli-sanitize-html)
+ [![NPM Version](https://badge.fury.io/js/ember-cli-sanitize-html.svg)](http://badge.fury.io/js/ember-cli-sanitize-html)
+ [![Ember Observer Score](http://emberobserver.com/badges/ember-cli-sanitize-html.svg)](http://emberobserver.com/addons/ember-cli-sanitize-html)
+
 A wrapper around the [sanitize-html](https://github.com/punkave/sanitize-html/) library for use in ember-cli projects
 
 ## Installation
