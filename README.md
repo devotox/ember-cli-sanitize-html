@@ -1,5 +1,7 @@
 # ember-cli-sanitize-html
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/devotox/ember-cli-sanitize-html.svg)](https://greenkeeper.io/)
+
 A wrapper around the [sanitize-html](https://github.com/punkave/sanitize-html/) library for use in ember-cli projects
 
 ## Installation
