@@ -7,8 +7,9 @@ import layout from '../templates/components/sanitize-html';
 export default Component.extend({
   layout,
 
-  value:      undefined,
-  options:    undefined,
+  raw: false,
+  value: undefined,
+  options: undefined,
   classNames: ['sanitized-value'],
 
   didReceiveAttrs() {
