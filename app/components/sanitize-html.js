@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-sanitize-html/components/sanitize-html';

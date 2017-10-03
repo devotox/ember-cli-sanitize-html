@@ -1,12 +1,29 @@
 # ember-cli-sanitize-html
 
-This README outlines the details of collaborating on this Ember addon.
+A wrapper around the [sanitize-html](https://github.com/punkave/sanitize-html/) library for use in ember-cli projects
 
 ## Installation
+* `ember install ember-sanitize-html`
 
-* `git clone <repository-url>` this repository
-* `cd ember-cli-sanitize-html`
-* `npm install`
+## Usage
+
+### Component
+```handlebars
+{{sanitize-html value="YOUR HTML" options=options}}
+```
+
+### Util
+```javascript
+sanitizeHtml('YOUR HTML', options)
+```
+or
+```javascript
+import sanitize from 'ember-sanitize-html/utils/sanitize-html'
+sanitize('YOUR HTML', options)
+```
+
+## Available options
+See original library [sanitize-html](https://github.com/punkave/sanitize-html/)
 
 ## Running
 
