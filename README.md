@@ -9,7 +9,7 @@ A wrapper around the [sanitize-html](https://github.com/punkave/sanitize-html/) 
 
 ### Component
 ```handlebars
-{{sanitize-html value="YOUR HTML" options=options}}
+{{sanitize-html raw=<true|false>[default=false] value="YOUR HTML" options=options}}
 ```
 
 ### Util
