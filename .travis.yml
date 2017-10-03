@@ -1,41 +1,31 @@
----
 language: node_js
 node_js:
-  # we recommend testing addons with the same minimum supported node version as Ember CLI
-  # so that your addon works for all apps
-  - "4"
-
+- '4'
 sudo: false
 dist: trusty
-
 addons:
   chrome: stable
-
 cache:
   directories:
-    - $HOME/.npm
-
+  - "$HOME/.npm"
 env:
-  # we recommend new addons test the current and previous LTS
-  # as well as latest stable release (bonus points to beta/canary)
-  - EMBER_TRY_SCENARIO=ember-lts-2.8
-  - EMBER_TRY_SCENARIO=ember-lts-2.12
-  - EMBER_TRY_SCENARIO=ember-release
-  - EMBER_TRY_SCENARIO=ember-beta
-  - EMBER_TRY_SCENARIO=ember-canary
-  - EMBER_TRY_SCENARIO=ember-default
-
+- EMBER_TRY_SCENARIO=ember-lts-2.8
+- EMBER_TRY_SCENARIO=ember-lts-2.12
+- EMBER_TRY_SCENARIO=ember-release
+- EMBER_TRY_SCENARIO=ember-beta
+- EMBER_TRY_SCENARIO=ember-canary
+- EMBER_TRY_SCENARIO=ember-default
 matrix:
   fast_finish: true
   allow_failures:
-    - env: EMBER_TRY_SCENARIO=ember-canary
-
+  - env: EMBER_TRY_SCENARIO=ember-canary
 before_install:
-  - npm config set spin false
-  - npm install -g npm@4
-  - npm --version
-
+- npm config set spin false
+- npm install -g npm@4
+- npm --version
 script:
-  # Usually, it's ok to finish the test scenario without reverting
-  #  to the addon's original dependency state, skipping "cleanup".
-  - node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+- node_modules/.bin/ember try:one $EMBER_TRY_SCENARIO --skip-cleanup
+notifications:
+  slack:
+    rooms:
+      secure: anFmLYwmm+ISlmFP6DCNZABDmt/p6c8mmKrymj5NQw+M7cSayzKPfoDTTgFwXsy9DnyaxhMLHOc1tgCSrG7Pv1nCbrtVpaRcJTmKd0wgu0ejdkimNyrMMFXdw4lQQH97EnVcwJPmjpvBcOYpTSunEt8Ya+747laJCkN335posZjy81jfrZaoTFQByaShLDflO24K40qqVyR+ACEk1N5J1r1SSiZO4NWzAe/k2ydJiRdvruldhY89uXL49h1yfxNbFJjwNQqQ4UBeCHdpa374wXB2UrEXr4DIYGllS8dHPnscm6W7PE+ehUYpB+R+OT7zyhbIOdJdPNOcLer0MwL+Nbr6Ln1Q9t4ZA4AqsFAvrMFDxG8SZdpcyOMRRuwACtqtrrvXe/NQJQIPKacqLtUTcmOCelfbY2ywWlMlGKPjmEY2ULSRmfPK6cD8f5T/nWG41HEoBdBGlkmDQsR6Zb0mPXx1wmNFGpE86kgMVLrzwu8WW3w8WVXP9xkRWd3/+6//cYEGe+URbo+Nd8dNpXNoAHGkyBKFRBBA4vvS5lkcUs3aMLwB5yOjLiiHLo032KgZL4/EJsOrqdaOQzzKQe2DIiG7DykWT4QOUuoc+wMnsPlHC2ORhImHXU4pZdgLBeybAqQSd+BltDLUFDPnlaA1sPJYqpfUxMqajJGoPTBNJ7s=
