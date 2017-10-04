@@ -7,7 +7,19 @@
 {{sanitize-html value=value}}
 
 <h3>Block Params</h3>
-{{#sanitize-html value=value as |sanitizedValue|}}
+{{#sanitize-html
+	value=value as
+|sanitizedValue|}}
 	{{sanitizedValue}}
+{{/sanitize-html}}
+
+<h3>Sanitized Raw</h3>
+{{sanitize-html value=value raw=true}}
+
+<h3>Raw Block Params</h3>
+{{#sanitize-html
+	value=value as
+|sanitizedValue|}}
+	{{{sanitizedValue}}}
 {{/sanitize-html}}
 {{outlet}}

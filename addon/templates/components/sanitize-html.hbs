@@ -1,5 +1,9 @@
 {{#if hasBlock}}
     {{yield sanitizedValue}}
 {{else}}
-    {{sanitizedValue}}
+    {{#if raw}}
+        {{{sanitizedValue}}}
+    {{else}}
+        {{sanitizedValue}}
+    {{/if}}
 {{/if}}

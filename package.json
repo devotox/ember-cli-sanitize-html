@@ -1,17 +1,19 @@
 {
   "name": "ember-cli-sanitize-html",
-  "version": "1.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "1.0.4",
+  "description": "Wrapper for Sanitize HTML to help clean up unwanted html tags",
   "keywords": [
-    "ember-addon"
+    "ember-addon",
+    "sanitize-html",
+    "sanitize"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Devonte Emokpae",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/devotox/ember-cli-sanitize-html",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
@@ -24,7 +26,6 @@
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
-    "bower": "^1.8.2",
     "ember-cli-babel": "^6.6.0",
     "ember-cli-htmlbars": "^2.0.1"
   },
@@ -45,7 +46,7 @@
     "ember-load-initializers": "^1.0.0",
     "ember-resolver": "^4.0.0",
     "loader.js": "^4.2.3",
-    "ember-source": "~2.15.1"
+    "ember-source": "~2.16.0-beta.1"
   },
   "engines": {
     "node": "^4.5 || 6.* || >= 7.*"
