@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-sanitize-html",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Wrapper for Sanitize HTML to help clean up unwanted html tags",
   "keywords": [
     "ember-addon",
