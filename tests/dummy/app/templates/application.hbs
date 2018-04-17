@@ -1,4 +1,4 @@
-<h2 id="title">Welcome to Ember</h2>
+<h2 id="title">Ember CLI Sanitize HTML</h2>
 
 <h3>Enter Value</h3>
 {{textarea value=value cols=100 rows=10}}
@@ -8,8 +8,8 @@
 
 <h3>Block Params</h3>
 {{#sanitize-html
-	value=value as
-|sanitizedValue|}}
+	value=value
+as |sanitizedValue|}}
 	{{sanitizedValue}}
 {{/sanitize-html}}
 
@@ -22,4 +22,3 @@
 as |sanitizedValue|}}
 	{{{sanitizedValue}}}
 {{/sanitize-html}}
-{{outlet}}

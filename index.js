@@ -1,30 +1,26 @@
-/* eslint-env node */
 'use strict';
 
+var FastbootTransform = require('fastboot-transform');
+
 module.exports = {
-  name: 'ember-cli-sanitize-html',
+	name: 'ember-cli-sanitize-html',
+	options: {
+		nodeAssets: {
+			'sanitize-html': {
+				vendor: {
+					srcDir: 'dist',
+					include: ['sanitize-html.js'],
+					processTree(input) {
+						return FastbootTransform(input);
+					}
+				}
+			}
+		}
+	},
+	included() {
+		this._super.included.apply(this, arguments);
 
-  included() {
-	this._super.included.apply(this, arguments);
-	this._ensureThisImport();
-
-    this.import('vendor/sanitize-html.js');
-  },
-  _ensureThisImport() {
-	if (!this.import) {
-	  this._findHost = function findHostShim() {
-		let current = this;
-		let app;
-
-		do {
-		  app = current.app || app;
-		} while (current.parent.parent && (current = current.parent));
-		return app;
-	  };
-	  this.import = function importShim(asset, options) {
-		let app = this._findHost();
-		app.import (asset, options);
-	  };
+		this.import('vendor/sanitize-html/sanitize-html.js');
+		this.import('vendor/shims/sanitize-html.js');
 	}
-  }
 };
