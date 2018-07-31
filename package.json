@@ -41,7 +41,7 @@
   },
   "dependencies": {
     "ember-cli-babel": "^6.12.0",
-    "ember-cli-htmlbars": "^2.0.3",
+    "ember-cli-htmlbars": "^3.0.0",
     "sanitize-html": "^1.18.2",
     "ember-cli-node-assets": "^0.2.2",
     "fastboot-transform": "^0.1.3"
