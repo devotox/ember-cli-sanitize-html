@@ -3,18 +3,18 @@
 <h3>Enter Value</h3>
 {{textarea value=value cols=100 rows=10}}
 
-<h3>Sanitized</h3>
+<h3>Sanitized Inline</h3>
 {{sanitize-html value=value}}
 
-<h3>Block Params</h3>
+<h3>Raw Inline</h3>
+{{sanitize-html value=value raw=true}}
+
+<h3>Sanitized Block Params</h3>
 {{#sanitize-html
 	value=value
 as |sanitizedValue|}}
   {{sanitizedValue}}
 {{/sanitize-html}}
-
-<h3>Sanitized Raw</h3>
-{{sanitize-html value=value raw=true}}
 
 <h3>Raw Block Params</h3>
 {{#sanitize-html
