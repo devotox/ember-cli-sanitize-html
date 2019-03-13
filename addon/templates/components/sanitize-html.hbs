@@ -1,9 +1,11 @@
 {{#if hasBlock}}
-    {{yield sanitizedValue}}
+  {{yield sanitizedValue}}
 {{else}}
-    {{#if raw}}
-        {{{sanitizedValue}}}
-    {{else}}
-        {{sanitizedValue}}
-    {{/if}}
+  {{#if raw}}
+    {{! template-lint-disable no-triple-curlies }}
+    {{{sanitizedValue}}}
+    {{! template-lint-enable no-triple-curlies }}
+  {{else}}
+    {{sanitizedValue}}
+  {{/if}}
 {{/if}}

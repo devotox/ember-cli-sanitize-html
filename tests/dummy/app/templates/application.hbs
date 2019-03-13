@@ -10,7 +10,7 @@
 {{#sanitize-html
 	value=value
 as |sanitizedValue|}}
-	{{sanitizedValue}}
+  {{sanitizedValue}}
 {{/sanitize-html}}
 
 <h3>Sanitized Raw</h3>
@@ -20,5 +20,7 @@ as |sanitizedValue|}}
 {{#sanitize-html
 	value=value
 as |sanitizedValue|}}
-	{{{sanitizedValue}}}
+  {{! template-lint-disable no-triple-curlies }}
+  {{{sanitizedValue}}}
+  {{! template-lint-enable no-triple-curlies }}
 {{/sanitize-html}}
