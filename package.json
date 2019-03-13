@@ -9,28 +9,33 @@
   ],
   "license": "MIT",
   "author": "Devonte Emokpae",
+  "repository": "https://github.com/devotox/ember-cli-sanitize-html",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "https://github.com/devotox/ember-cli-sanitize-html",
   "scripts": {
+    "test": "ember test",
+    "lint:js": "eslint .",
     "build": "ember build",
-    "start": "ember server",
-    "test": "ember try:each",
+    "start": "ember serve",
+    "preversion": "npm test",
     "precommit": "lint-staged",
     "update": "ncu -u -a; yarn",
+    "test:all": "ember try:each",
     "postrelease": "npm publish",
     "release": "npm version patch",
+    "lint:hbs": "ember-template-lint .",
     "release-patch": "npm version patch",
     "release-minor": "npm version minor",
     "release-major": "npm version major",
     "postversion": "git push && git push --tags",
     "deploy:release": "npm run release; npm run deploy",
-    "lint:js": "eslint ./*.js addon addon-test-support app config lib server test-support tests",
-    "deploy:setup": "git add -A; git commit -m \"Added ember-cli-github-pages addon\"; git checkout --orphan gh-pages; rm -rf `bash -c \"ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|([.]{1,2}/?$)'\"`; touch .gitkeep; git add -A; git commit -m \"initial gh-pages commit\"; git checkout master",
+    "format": "find app addon config tests -name '*.js' -type f | xargs prettier --write | xargs eslint --fix",
+    "nearley": "nearleyc app/grammar/index.ne -o app/grammar/index.js; node app/grammar/parser.js; rm -rf app/grammar/index.js",
     "deploy": "ember github-pages:commit --message \"Deploy gh-pages from commit $(git rev-parse HEAD)\"; git push origin gh-pages; git checkout master",
-    "format": "find app addon config tests -name '*.js' -type f | xargs prettier --write | xargs eslint --fix"
+    "update:packages": "npx ncu -u -a --removeRange && yarn install --force --check-files --update-checksums --ignore-engines && yarn upgrade --force --ignore-engines",
+    "deploy:setup": "git add -A; git commit -m \"Added ember-cli-github-pages addon\"; git checkout --orphan gh-pages; rm -rf `bash -c \"ls -a | grep -vE '.gitignore|.git|node_modules|bower_components|([.]{1,2}/?$)'\"`; touch .gitkeep; git add -A; git commit -m \"initial gh-pages commit\"; git checkout master"
   },
   "lint-staged": {
     "*.{js,json,css}": [

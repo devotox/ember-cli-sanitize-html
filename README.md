@@ -12,7 +12,7 @@ ember-cli-sanitize-html
 
 A wrapper around the [sanitize-html](https://github.com/punkave/sanitize-html/) library for use in ember-cli projects
 
-[DEMO](http://devotox.github.io/ember-cli-sanitize-html)
+[DEMO](https://devotox.github.io/ember-cli-sanitize-html)
 
 Installation
 ------------------------------------------------------------------------------
