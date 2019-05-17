@@ -3,8 +3,8 @@
 [![Coverage Status](https://codecov.io/gh/devotox/ember-cli-sanitize-html/branch/master/graph/badge.svg)](https://codecov.io/gh/devotox/ember-cli-sanitize-html)
 [![NPM Version](https://badge.fury.io/js/ember-cli-sanitize-html.svg)](http://badge.fury.io/js/ember-cli-sanitize-html)
 [![NPM Downloads](https://img.shields.io/npm/dm/ember-cli-sanitize-html.svg)](https://www.npmjs.org/package/ember-cli-sanitize-html)
-[![Dependency Status](https://david-dm.org/poetic/ember-cli-sanitize-html.svg)](https://david-dm.org/poetic/ember-cli-sanitize-html)
-[![DevDependency Status](https://david-dm.org/poetic/ember-cli-sanitize-html/dev-status.svg)](https://david-dm.org/poetic/ember-cli-sanitize-html#info=devDependencies)
+[![Dependency Status](https://david-dm.org/devotox/ember-cli-sanitize-html.svg)](https://david-dm.org/devotox/ember-cli-sanitize-html)
+[![DevDependency Status](https://david-dm.org/devotox/ember-cli-sanitize-html/dev-status.svg)](https://david-dm.org/devotox/ember-cli-sanitize-html#info=devDependencies)
 [![Greenkeeper](https://badges.greenkeeper.io/devotox/ember-cli-sanitize-html.svg)](https://greenkeeper.io/)
 
 ember-cli-sanitize-html
