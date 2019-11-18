@@ -6456,9 +6456,9 @@ posix-character-classes@^0.1.0:
   integrity sha1-AerA/jta9xoqbAL+q7jB/vfgDqs=
 
 postcss@^7.0.5:
-  version "7.0.21"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.21.tgz#06bb07824c19c2021c5d056d5b10c35b989f7e17"
-  integrity sha512-uIFtJElxJo29QC753JzhidoAhvp/e/Exezkdhfmt8AymWT6/5B7W1WmponYWkHk2eg6sONyTch0A3nkMPun3SQ==
+  version "7.0.22"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-7.0.22.tgz#661442eb04aa50db5331fa58f46ff8117cbacec6"
+  integrity sha512-LSC+iSy7u2O/6DB54nBNHjuZYR7BwcOjFN8nbD/9K/l4TJBfeyGkK52zwuqqEN2/QnsM6SDDFQQDd2AjjqgFXg==
   dependencies:
     chalk "^2.4.2"
     source-map "^0.6.1"
